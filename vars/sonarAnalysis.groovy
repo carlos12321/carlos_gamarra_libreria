@@ -3,7 +3,7 @@ def call(boolean abortPipeline = false, boolean waitForSonarResults = true) {
         steps {
             script {
                 // Ejecuta el análisis de SonarQube
-                sh 'SonarScanner'
+                sh 'sonnar-scanner'
                 
                 if (waitForSonarResults) {
                     // Espera durante 5 minutos por los resultados del análisis
